@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       if auth_header()
          token = auth_header.split(' ')[1]
          begin
-            JWT.decode(token, Rails.application.credentials.secret_key_base, true, 
+            JWT.decode(token, ENV["SECRET_KEY_BASE"], true, 
                algorithm: 'HS256')
          rescue JWT::DecodeError
             nil
@@ -30,6 +30,6 @@ class ApplicationController < ActionController::Base
    end
    def encode_token(payload)
       payload[:exp] = Time.now.to_i + 86400
-      JWT.encode(payload, Rails.application.credentials.secret_key_base)
+      JWT.encode(payload, ENV["SECRET_KEY_BASE"])
    end
 end
