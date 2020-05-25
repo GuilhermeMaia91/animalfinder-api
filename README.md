@@ -19,7 +19,7 @@ Rotas:<br>
     post 'URL_BASE/api/v1/login' => 'Realiza o login na aplicação'<br>
     post 'URL_BASE/api/v1/signup' => 'Realiza o cadastro do usuário na aplicação'<br>
     get 'URL_BASE/api/v1/animals' => 'Não necessita de autenticação e exibe todos os animais independente do status'<br>
-    get 'URL_BASE/api/v1/lost-animals' => 'Não necessita de autenticação e exibe todos os animais perdidos'<br>
+    get 'URL_BASE/api/v1/lost-animals' => 'Não necessita de autenticação e exibe todos os animais perdidos URL para o APP (Smartphone) da ONG'<br>
     post 'URL_BASE/api/v1/found' => 'Não necessita de autenticação e comunica um animal desaparecido, informando os campos na request name e phone'<br>
     get 'URL_BASE/api/v1/owner/show' => 'Exibe as informações do proprietario logado na aplicação, não precisa de parametros, pois a aplicação pega os dados pelo token enviado no header'<br>
     put 'URL_BASE/api/v1/owner/edit' => 'Edita as informações do proprietario,  não precisa de parametros, pois a aplicação pega os dados pelo token enviado no header'<br>
