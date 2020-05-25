@@ -1,0 +1,21 @@
+default: &default
+  adapter  : postgresql
+  encoding : unicode
+  port     : 5432
+  pool     : 5
+  username : postgres
+
+  password : 1597530
+  host     : localhost
+
+development:
+  <<: *default
+  database: Animalfinder_Development
+
+test:
+  <<: *default
+  database: Animalfinder_Test
+
+production:
+  <<: *default
+  database: Animalfinder_Production
